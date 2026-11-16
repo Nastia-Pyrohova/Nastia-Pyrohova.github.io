@@ -1,10 +1,8 @@
-/* EDIT THESE LINKS BEFORE YOU PUBLISH.
-   Keep a value empty ("") to hide that contact link automatically.
-   The main contact form works when you deploy the site through Netlify.
-*/
-window.PORTFOLIO_CONFIG = {
-  email: "",
-  upwork: "",
-  linkedin: "",
-  github: ""
+/* Edit these links before publishing. No API keys or private data here. */
+window.SITE_CONFIG = {
+  linkedin: 'https://www.linkedin.com/in/anastasiia-pyrohova/',
+  github: 'https://github.com/Nastia-Pyrohova',
+  upwork: '', // Optional: add a link to your Upwork profile
+  email: '',  // Optional: enabling email shows the contact form (mailto draft)
+  showDraftProjects: true // Hide blanks from public visitors by setting false
 };

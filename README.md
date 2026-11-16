@@ -1,67 +1,67 @@
-# Anastasiia Pyrohova — Portfolio Website
+# Anastasiia Pyrohova — GitHub Pages portfolio
 
-An editable, responsive, bilingual (English / Ukrainian) portfolio site built with plain HTML, CSS and JavaScript. No build tooling is required.
+A static, responsive portfolio with English and Ukrainian language switching. It introduces Anastasiia as a developer, startup founder and product builder, shows services and honest professional milestones, includes a founder/collaborators section, and has **six editable project placeholders**.
 
-## What's inside
+**No npm / build / backend needed**: the site is HTML, CSS, JS and local images.
 
-- `index.html` — site content, case studies, services and contact form
-- `styles.css` — all design styles, mobile layout and project illustrations
-- `app.js` — translations, project filters, responsive menu and links
-- `site-config.js` — **put your personal contact information here**
-- `thanks.html` — thank-you screen after a successfully submitted inquiry
-- `favicon.svg` — site icon
-- `og-cover.png` — social sharing preview
+## Publish to your GitHub Pages site
 
-## 1. Add your real contact links before publishing (important!)
+This package is designed for **https://nastia-pyrohova.github.io/**. The profile link in the site is currently `https://github.com/Nastia-Pyrohova`.
 
-Open `site-config.js` and replace the empty strings. For example:
+1. Open the repository that currently publishes your GitHub Pages site (normally `Nastia-Pyrohova/nastia-pyrohova.github.io`).
+2. Replace or upload **all files from the ZIP**, preserving paths, *at the repository root*: `index.html`, `styles.css`, `script.js`, `projects.js`, `site-config.js`, `.nojekyll`, and the `assets/` directory.
+3. Commit the change. Check **Settings → Pages**: deploy from `main` and `/(root)` if this is your deployment setup. Do not upload just the ZIP itself.
+4. Open your published site. GitHub Pages deployments sometimes take a little time to appear.
 
-```javascript
-window.PORTFOLIO_CONFIG = {
-  email: "me@example.com",
-  upwork: "https://www.upwork.com/freelancers/your-real-profile",
-  linkedin: "https://www.linkedin.com/in/your-real-profile/",
-  github: "https://github.com/your-real-username"
-};
+This ZIP **does not change your live GitHub repository automatically**. Publishing requires your GitHub login.
+
+## Add project cards — edit only `projects.js`
+
+Each object is one card. All six examples are **unpublished placeholders**, not claims about completed client work. To publish one, change its fields:
+
+```js
+{
+  id: 'website',
+  category: 'web',              // web | commerce | design | automation
+  published: true,
+  image: 'my-website.webp',     // put file in assets/projects/
+  link: 'https://example.com',  // can be '' if confidential
+  title: { en: 'My real project', uk: 'Мій реальний проєкт' },
+  description: {
+    en: 'What I built, my role and the outcome.',
+    uk: 'Що я створила, моя роль і результат.'
+  },
+  tech: ['React', 'TypeScript']
+}
 ```
 
-**Do not copy these example addresses directly.** The site automatically hides contact links whose values are empty. The main CTA points to the project inquiry form.
+**Project images:** put your screenshot or image into `assets/projects/`, then set the exact filename in `image`. Recommended: 1200×750px WebP/JPEG; use only images you own or may share. When you are ready to show only completed cases, set `showDraftProjects: false` in `site-config.js`.
 
-## 2. Deploy on Netlify (recommended because the contact form works)
+## Services and design assets
 
-1. Log in to Netlify and create a new site using **Deploy manually** / drag-and-drop.
-2. Upload the *contents of this folder* (or drag the whole folder into its deployment area).
-3. Netlify detects the HTML form marked `data-netlify="true"` during deployment. On the first deployment, check **Forms** in your Netlify dashboard and enable notifications to your inbox.
-4. Submit a real test form after deployment and verify the inquiry appears in the Netlify Forms inbox.
-5. Set your custom domain under Netlify's domain settings if you own one.
+- Your portrait is saved locally as `assets/anastasiia-portrait.webp`, made from the image you provided.
+- All service cards use **local illustrative graphics** under `assets/services/` (no hotlinking). You can swap a service image path in `index.html` for a real photo later.
+- The site does **not** display speculative fake client screenshots as completed work.
+- Social-sharing cover is `assets/og-cover.png`.
 
-If you use GitHub Pages or another static host, the contact form will **not** send submissions automatically. Replace it with your form provider, or deploy on Netlify. The email/social links work independently once configured.
+## Contacts
 
-## 3. Edit the text and work examples
+Edit `site-config.js`:
 
-- Edit `index.html` for English default text, projects, images, and services.
-- Edit **both** `en` and `uk` sections in `app.js` for language switching. On load, translation strings replace elements with `data-i18n` keys.
-- The project visuals are **illustrative CSS drawings**, not screenshots or claimed final product interfaces.
-- No fake client testimonials or invented growth numbers have been added.
-- Two commercial WordPress project descriptions intentionally do not reveal confidential clients.
-- If you have shareable source links, add real project links after the project descriptions; verify each link works and you are allowed to disclose the project.
+- `linkedin`: your verified public profile
+- `github`: your current account
+- `upwork`: add your **real** profile URL (blank until then)
+- `email`: optional, remains blank until you enter one
 
-## 4. Test locally
+Visitors can message you through LinkedIn by default. When you set an email, a **mailto:** project inquiry form appears; it prepares an email in the visitor's mail app. GitHub Pages cannot itself process form submissions. To receive submissions directly on the page, connect a form provider, e.g. Formspree, and configure it separately.
 
-Just open `index.html` in a browser. To reproduce a real deployment more closely, use a local web server:
+## Languages and layout
 
-```bash
-python3 -m http.server 8000
-```
+- English is the default; the UA/EN toggle is in `script.js`.
+- Translate the **static English** in `index.html` and the **Ukrainian dictionary** in `script.js`.
+- Design is in `styles.css`. The site is mobile responsive.
+- Achievement descriptions are conservative. Aligna is presented as an early-stage startup, with Anastasiia as its founder and CEO. Collaborators are not represented as employees of a formal agency.
 
-Visit `http://localhost:8000`. The inquiry form only processes submissions on a deployed Netlify site.
+## Test locally
 
-## 5. Make it even stronger for Upwork
-
-- Add a professional photograph if you want to use one.
-- Attach 2–3 shareable, real code or live-site links (with permission).
-- Add a clear domain (e.g. `anastasiia.dev` if available).
-- Add your real Upwork profile URL in `site-config.js` so prospects can hire you there.
-- Send proposals that mention the prospect's issue and link to the most relevant case study section, rather than sending the same generic pitch.
-
-**Privacy:** The website contains only public-professional information. The example site includes no personal email address or invented account URL. Before launching, review the content and remove any employment or project detail you do not wish to make public.
+Open `index.html` in your browser. For a local HTTP test, run `python3 -m http.server 8000` in the folder and visit `http://localhost:8000`. No dependencies required.
