@@ -50,7 +50,7 @@ Edit `site-config.js`:
 
 - `linkedin`: your verified public profile
 - `github`: your current account
-- `upwork`: add your **real** profile URL (blank until then)
+- `upwork`: **already set** to your shared Upwork profile URL
 - `email`: optional, remains blank until you enter one
 
 Visitors can message you through LinkedIn by default. When you set an email, a **mailto:** project inquiry form appears; it prepares an email in the visitor's mail app. GitHub Pages cannot itself process form submissions. To receive submissions directly on the page, connect a form provider, e.g. Formspree, and configure it separately.
@@ -65,3 +65,13 @@ Visitors can message you through LinkedIn by default. When you set an email, a *
 ## Test locally
 
 Open `index.html` in your browser. For a local HTTP test, run `python3 -m http.server 8000` in the folder and visit `http://localhost:8000`. No dependencies required.
+
+## Updated sections (November 2026)
+
+- Hero now says **3+ years in web development** (not 3+ years of commercial employment). The second number represents 3+ years in tech education.
+- The About timeline shows **Full-Stack Web Developer — Already Media**. Binary Studio Academy and Kharkiv IT Cluster are grouped under **Professional Development** (not presented as additional commercial employers).
+- The skills list is grouped into frontend, backend, web/e-commerce, AI/automation, and design/product. Remove any technologies you don't want to offer commercially.
+- The Aligna card links to `https://aligna.com.ua/`.
+- The fourth achievement is participation in the **Case Challenge 3.0 Semi-Final**, with a local certificate image in `assets/achievements/`.
+- Contact offers **Upwork** and **LinkedIn**, and uses only external links compatible with GitHub Pages.
+- English/UA translations and editable `projects.js` placeholders are preserved.

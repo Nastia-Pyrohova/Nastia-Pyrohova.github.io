@@ -45,3 +45,24 @@
 @media (max-width:1030px){.team-layout{gap:28px}.team-visual{padding:18px}.team-expertise>div{padding:11px 8px;gap:6px}}
 @media (max-width:780px){.team-layout{grid-template-columns:1fr;gap:30px}.team-intro h2{font-size:clamp(39px,7vw,60px)}.team-visual{max-width:650px}}
 @media (max-width:520px){.team-intro .team-lead{font-size:15px}.team-intro p{font-size:12px}.team-visual{padding:13px}.founder-headline{padding:17px;gap:12px}.founder-mark{width:48px;height:48px;flex-basis:48px;font-size:30px}.founder-headline h3{font-size:26px}.team-expertise{grid-template-columns:1fr 1fr}.team-expertise b{font-size:10px}.team-expertise>div{gap:4px;padding:11px 8px}.team-icon{font-size:13px}.team-actions{align-items:flex-start;flex-direction:column}}
+
+/* Portfolio v2: clear hierarchy for experience, professional training & skills */
+.about-right{min-width:0}
+.training-card{margin-top:15px}
+.about-tech-card{padding:25px 27px}
+.about-tech-card>.toolkit-group{display:block;padding:12px 0 0;margin:0;border:0;border-top:1px solid #a99ab52b}
+.about-tech-card>.toolkit-group+.toolkit-group{margin-top:12px}
+.about-tech-card>.toolkit-group h3{font-size:10px;font-weight:800;letter-spacing:.08em;line-height:1.45;color:#baa9d4;margin:0 0 10px}
+.about-tech-card>.toolkit-group .toolkit-chips{display:flex;flex-wrap:wrap;gap:7px}
+.about-tech-card>.toolkit-group .toolkit-chips span{border:1px solid #b9a7d44a;color:#e6dcfa;border-radius:14px;padding:6px 10px;font-size:10px;line-height:1.3}
+.hero-sticker.sticker-top{max-width:195px;min-width:160px}
+.hero-sticker.sticker-bottom{max-width:245px}
+.hero-sticker .sticker-mark{flex-shrink:0}
+.founder-headline .aligna-link{color:inherit;display:inline-flex;align-items:center;gap:7px}
+.founder-headline .aligna-link:hover,.founder-headline .aligna-link:focus-visible{color:#e1c6ff;text-decoration:underline;text-underline-offset:4px}
+.founder-headline .founder-visit{display:inline-block;margin:10px 0 0;color:#d5b9ff;font-size:11px;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.certificate-link{font-size:11px;font-weight:800;color:#8057c9;display:inline-block;margin-top:auto;padding-top:12px;text-decoration:underline;text-underline-offset:4px}
+.certificate-link:hover{color:#593ba7}
+.contact-buttons .button-primary{box-shadow:0 8px 24px #a16cfa44}
+@media(max-width:780px){.about-tech-card>.toolkit-group .toolkit-chips{gap:7px}.hero-sticker.sticker-top{max-width:190px}.hero-sticker.sticker-bottom{max-width:230px}}
+@media(max-width:520px){.hero-sticker.sticker-top{min-width:0;max-width:172px;right:-1px}.hero-sticker.sticker-bottom{max-width:210px;left:0}.about-tech-card{padding:20px 17px}.about-card{padding:21px 18px}.training-card{margin-top:13px}}
