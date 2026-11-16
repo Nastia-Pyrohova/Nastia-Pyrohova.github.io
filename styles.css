@@ -66,3 +66,8 @@
 .contact-buttons .button-primary{box-shadow:0 8px 24px #a16cfa44}
 @media(max-width:780px){.about-tech-card>.toolkit-group .toolkit-chips{gap:7px}.hero-sticker.sticker-top{max-width:190px}.hero-sticker.sticker-bottom{max-width:230px}}
 @media(max-width:520px){.hero-sticker.sticker-top{min-width:0;max-width:172px;right:-1px}.hero-sticker.sticker-bottom{max-width:210px;left:0}.about-tech-card{padding:20px 17px}.about-card{padding:21px 18px}.training-card{margin-top:13px}}
+
+
+section#work {
+    display: none;
+}
